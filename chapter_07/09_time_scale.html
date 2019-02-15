@@ -19,10 +19,10 @@
 			var dataset, xScale, yScale;  //Empty, for now
 
 			//For converting strings to Dates
-			var parseTime = d3.timeParse("%m/%d/%y");
+			var parseTime = d3.timeParse("%Y-%m-%d");
 
 			//For converting Dates to strings
-			var formatTime = d3.timeFormat("%b %e");
+			var formatTime = d3.timeFormat("%e %B %y");
 
 			//Function for converting CSV values from strings to Dates and numbers
 			var rowConverter = function(d) {
@@ -33,7 +33,7 @@
 			}
 
 			//Load in the data
-			d3.csv("time_scale_data.csv", rowConverter, function(data) {
+			d3.csv("time_scale_data2.csv", rowConverter, function(data) {
 
 				//Copy data into global dataset
 				dataset = data;
