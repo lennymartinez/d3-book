@@ -50,6 +50,10 @@
 			   })
 			   .attr("fill", function(d) {
 					return "rgb(0, 0, " + Math.round(d * 10) + ")";
+			   })
+			   .on("click", function (d){
+			  		//This will run whenever *any* bar is clicked
+			  		console.log(d);
 			   });
 
 			//Create labels
